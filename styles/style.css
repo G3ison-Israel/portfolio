@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');/*Fonts retiradas do Google Fonts*/
+
+/*Variaveis globais, contém as cores prncipais do projeto, utilizado para não escrever, repetir, as cores, propriedades sensiveis, varias vezes*/
+:root{
+    --cor-primaria:#1C0A00;
+    --cor-secundaria:#CC9544;
+    --cor-tercearia:#603601;
+    /*--cor-hover:#361500;*/
+
+    --font-primaria:"Krona One", sans-serif;
+    --font-secundaria:'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;/*Retira toda margin e padding que vem por padrão no HTML.*/
+    padding: 0;
+}
+
+body{
+    /*height:100vh;*/ /*define o vh = viewport em 100%, ou seja o projeto esta sendo aberto em toda tela onde está sendo visualizado*/
+    box-sizing: border-box;/*Utilizado para garantir que uma imagem por exemplo, nâo saia do espaço do elemto pai*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;/*Superior, direito, esquerdo, inferior*/
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-tercearia);
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover{
+    background-color: var(--cor-secundaria);
+    color:var(--cor-primaria);
+}
+
+/*As classses apresentacao, apresentacao__conteudo, apresentacao__conteudo__titulo, apresentacao__conteudo__texto, foram criadas para utiliação das fonts do Google Fonts*/
+
+.apresentacao{
+    padding: 4% 15%; /*Define a margem para pocisionar texto e imagem*/
+    display: flex; /*Torna o display flexivel*/
+    align-items:center;/*Alinha os elementos*/
+    justify-content:space-between;
+    gap: 82px;/*Mantem a mesma distância entre imagem e texto mesmo diminuindo a tela.*/
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    /*height: 482px;*/
+
+    display: flex;/*Deixa os textos flexiveis para organização*/
+    flex-direction: column;/*Mantem os elementos em colunas*/
+    gap: 40px; /*Espaçamento entre os elementos(textos)*/
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;/*Unidade de medida rem é uma unidade relativa, acompanha o confiuração do navegar onde o site está sendo visualizado*/
+    font-family: var(--font-primaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-tercearia);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--font-primaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;/*Posiciona os elementos em colunas*/
+    justify-content: space-between;
+    align-items: center;/*Alinha os elementos na vertical*/
+    gap: 32px;
+}
+
+.aprecentacao__links__subtitulo{
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao{
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-tercearia);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;/*Primeiro valor eixo vertical, segundo eixo horizontal*/
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+}
+
+.apresentacao__links__navegacao:hover{
+    background-color: var(--cor-secundaria);
+    color:var(--cor-primaria);
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    padding: 12px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-tercearia);
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+@media(max-width:1200px){/*Quando o projeto estiver com este tamanho em px essa será sua configuração*/
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    
+}
